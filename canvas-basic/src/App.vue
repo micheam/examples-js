@@ -1,27 +1,27 @@
 <template>
-  <div>
-    <p>{{ title }}</p>
-    <div>
-      <div>
-        <input id="width" type="digit" size="20" v-model="rect.width">
-        <label for="width">:幅</label>
-      </div>
-      <div>
-        <input id="height" type="digit" size="20" v-model="rect.height">
-        <label for="height">:高さ</label>
-      </div>
-      <div>
-        <input id="color" type="color" v-model="rect.color">
-        <label for="height">:背景色</label>
-      </div>
+  <section>
+    <h1>{{ title }}</h1>
+    <input id="left" type="digit" size="20" v-model="rect.left">
+    <label for="left">:left</label>
+    <br>
+    <input id="top" type="digit" size="20" v-model="rect.top">
+    <label for="top">:top</label>
+    <br>
+    <input id="width" type="digit" size="20" v-model="rect.width">
+    <label for="width">:width</label>
+    <br>
+    <input id="height" type="digit" size="20" v-model="rect.height">
+    <label for="height">:height</label>
+    <br>
+    <input id="color" type="color" v-model="rect.color">
+    <label for="height">:bg-color</label>
 
-      <p>
-        <button v-on:click="draw">draw</button>
-        <button v-on:click="clear">clear</button>
-      </p>
-      <div ref="container" v-bind:style="contanerStyle"></div>
-    </div>
-  </div>
+    <p>
+      <button v-on:click="draw">draw</button>
+      <button v-on:click="clear">clear</button>
+    </p>
+    <div ref="container" v-bind:style="contanerStyle"></div>
+  </section>
 </template>
 
 <script>
@@ -36,6 +36,8 @@ export default {
       canvas: {},
       context: {},
       rect: {
+        left: 0,
+        top: 0,
         width: 400,
         height: 200,
         color: "#3f43ff"
@@ -46,7 +48,7 @@ export default {
     draw: function() {
       const rect = this.rect;
       this.context.fillStyle = rect.color;
-      this.context.fillRect(50, 50, rect.width, rect.height);
+      this.context.fillRect(rect.left, rect.top, rect.width, rect.height);
     },
     clear: function() {
       const w = this.canvas.width,
