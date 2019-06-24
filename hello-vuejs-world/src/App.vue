@@ -1,12 +1,7 @@
 <template>
   <div class="container">
     <ul>
-      <li 
-        v-for="n in 3" 
-        :key="n"
-        >
-        {{ n }}: Hello, {{ bundler }} !!
-      </li>
+      <li v-for="n in 3" v-bind:key="n">{{ n }}: Hello, {{ bundler }} !!</li>
     </ul>
   </div>
 </template>
