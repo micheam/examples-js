@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>{{ title }}</title>
+</head>
+<body>
+<div id="app">
+    <div>
+        <div>
+            <input id="width" 
+                   type="digit" 
+                   size="20" 
+                   v-model="rect.width" />
+            <label for="width"> :幅</label>
+        </div>
+        <div>
+            <input id="height" 
+                   type="digit" 
+                   size="20" 
+                   v-model="rect.height" />
+            <label for="height"> :高さ</label>
+        </div>
+        <div>
+            <input id="color" 
+                   type="color" 
+                   v-model="rect.color" />
+            <label for="height"> :背景色</label>
+        </div>
+
+        <p>
+        <button @click="draw">draw</button>
+        <button @click="clear">clear</button>
+        </p>
+        </p>
+        <div ref="container" 
+             v-bind:style="contanerStyle"
+             ><!-- will add canvas element here -->
+        </div>
+    </div>
+</div>
+
+<script src="./src/index.js"></script>
+</body>
+</html>
