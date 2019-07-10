@@ -4,7 +4,7 @@
       <v-layout justify-center>
         <v-flex sm12>
           <v-card-title primary-title>
-            <h1 class="headline mb-0">Responsibe layout with Vuetify</h1>
+            <h1 class="headline mb-0">Responsive layout with Vuetify</h1>
           </v-card-title>
           <v-card-text>
             <v-layout row wrap>

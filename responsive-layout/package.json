@@ -1,4 +1,7 @@
 {
+  "name": "responsive-layout-sample",
+  "description": "Responsive Form with Preview and Action pane",
+  "keywords": [],
   "dependencies": {
     "vue": "^2.5.18",
     "vue-hot-reload-api": "^2.3.3",
