@@ -1,4 +1,7 @@
 {
+  "name": "json-builder",
+  "description": "Export Form Value as JSON file.",
+  "keywords": [],
   "dependencies": {
     "vue": "^2.5.18",
     "vue-hot-reload-api": "^2.3.3",
