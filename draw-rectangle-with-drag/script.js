@@ -1,3 +1,4 @@
+console.log("hello")
 const container = document.getElementById('container')
 const canvas = document.createElement('canvas')
 canvas.width = container.clientWidth
@@ -12,7 +13,8 @@ let canvasOffset = {
 }
 
 let dragging = false
-let draggStart = draggEnd = {}
+let draggStart = {}
+let draggEnd = {}
 let rectCache = []
 
 canvas.addEventListener('mousedown', function(e) {
