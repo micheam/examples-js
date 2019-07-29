@@ -19,8 +19,8 @@ let rectCache = []
 
 canvas.addEventListener('mousedown', function(e) {
   draggStart = {
-    x: parseInt(e.clientX - canvasOffset.x),
-    y: parseInt(e.clientY - canvasOffset.y),
+    x: parseInt(e.clientX - canvasOffset.x, 10),
+    y: parseInt(e.clientY - canvasOffset.y, 10),
   }
   dragging = true
 })
@@ -30,8 +30,8 @@ canvas.addEventListener('mouseup', function(e) {
 
   dragging = false
   draggEnd = {
-    x: parseInt(e.clientX - canvasOffset.x),
-    y: parseInt(e.clientY - canvasOffset.y),
+    x: parseInt(e.clientX - canvasOffset.x, 10),
+    y: parseInt(e.clientY - canvasOffset.y, 10),
   }
   let diff = {
     x: draggEnd.x - draggStart.x,
@@ -52,8 +52,8 @@ canvas.addEventListener('mousemove', function(e) {
   if (!dragging) return
 
   let current = {
-    x: parseInt(e.clientX - canvasOffset.x),
-    y: parseInt(e.clientY - canvasOffset.y),
+    x: parseInt(e.clientX - canvasOffset.x, 10),
+    y: parseInt(e.clientY - canvasOffset.y, 10),
   }
   let diff = {
     x: current.x - draggStart.x,
