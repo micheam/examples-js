@@ -1,0 +1,41 @@
+<!-- vim: set sw=2 ts=2: -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Canvas Rectangle</title>
+  <style box-shadow:>
+body {
+  background: lightgray;
+}
+#controller {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  right: 10px;
+  height: 30px;
+}
+#container {
+  position: absolute;
+  left: 10px;
+  top: 50px;
+  right: 10px;
+  bottom: 10px;
+}
+canvas {
+  background: white;
+  border: 1px dashed;
+  border-radius: 5px;
+}
+  </style>
+</head>
+<body>
+  <div id="controller">
+    <button id="prev">&lt;</button>
+    <button id="clear">Clear All</button>
+    <span style="position: inherit; right: 0px;">Draw rectangle on canvas with mouse drag 🎉</span>
+  </div>
+  <div id="container"></div>
+  <script src="script.js"></script>
+</body>
+</html>

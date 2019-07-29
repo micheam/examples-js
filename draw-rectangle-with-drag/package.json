@@ -1,0 +1,12 @@
+{
+  "name": "draw-rectangle-with-drag",
+  "version": "1.0.0",
+  "description": "Draw rectangle on canvas element with mouse drag (vanillaJS without any libraries)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}
